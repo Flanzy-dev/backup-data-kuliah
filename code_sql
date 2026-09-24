@@ -1,0 +1,53 @@
+-- SHOW TABLES; 
+-- DESCRIBE mscustomer;
+-- condition query
+-- SELECT * FROM mscustomer
+-- WHERE CustomerGender = 'Female'; -- mencari data yang gender nya perempuan
+-- WHERE CustomerGender != 'Female'; -- mencari data yang gender nya bukan perempuan
+-- SELECT * FROM msproduct
+-- WHERE ProductPrice >= 2;
+-- WHERE ProductStock >= 200 OR ProductPrice <= 2.00;
+
+-- SELECT * FROM msproduct
+-- WHERE ProductStock >= 200 OR ProductPrice <= 2.00;
+
+-- SELECT * FROM mscustomer
+-- WHERE CustomerID IN ('CU001','CU003','CU005');
+
+-- SELECT * FROM msproduct
+-- WHERE ProductName LIKE '%Apples%' -- untuk mencari nama yang berada di antara kata
+--                    	  V       V
+--                     sebelum sesudah
+
+-- SELECT ProductName, ProductPrice, (ProductPrice / 30) AS DailyPrice
+-- FROM msproduct;
+
+-- SELECT 
+	-- UPPER(ProductName) AS nama_kapital,
+    -- LOWER(ProductName) AS nama_kecil
+-- FROM msproduct;
+
+/* SELECT
+	LEFT(ProductID,3) AS kode_kategory,
+	RIGHT(ProductID,2) AS nada_kategory
+FROM msproduct; */
+
+-- SELECT
+	-- LENGTH(ProductID) AS fdsdfsd
+-- FROM msproduct;
+
+-- SELECT
+	-- CustomerID,
+    -- CustomerName,
+    -- SUBSTRING(CustomerName,1,4) AS initial_name,
+    -- SUBSTRING(CustomerEmail,1,5) AS initial_email 
+-- FROM mscustomer;
+
+-- SELECT
+	-- TRIM('  Fresh  ') AS trims -- Hapus Space dikanan(RTRIMS) & kiri(LTRIMS)
+-- FROM msproduct;
+
+SELECT
+	TransactionID,
+    TransactionDate,
+    ADDMONTH(Trans)
